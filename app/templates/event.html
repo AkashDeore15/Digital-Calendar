@@ -1,7 +1,4 @@
-{% extends 'base.html' %}
-{% block content %}
-<h1>Create Event</h1>
-<form method="post">
+<form method="POST">
     <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input type="text" class="form-control" id="title" name="title" required>
@@ -18,10 +15,18 @@
         <label for="end_time" class="form-label">End Time</label>
         <input type="datetime-local" class="form-control" id="end_time" name="end_time" required>
     </div>
+    <div class="mb-3">
+        <label for="recurrence" class="form-label">Recurrence</label>
+        <input type="text" class="form-control" id="recurrence" name="recurrence">
+    </div>
+    <div class="mb-3">
+        <label for="reminder_time" class="form-label">Reminder Time</label>
+        <input type="datetime-local" class="form-control" id="reminder_time" name="reminder_time">
+    </div>
+    
     <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="is_recurring" name="is_recurring">
         <label class="form-check-label" for="is_recurring">Recurring Event</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-{% endblock %}

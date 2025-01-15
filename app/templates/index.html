@@ -7,8 +7,11 @@
         <li class="list-group-item">
             <strong>{{ event.title }}</strong>
             <br>
-            {{ event.start_time }} - {{ event.end_time }}
+            {{ event.start_time or "No start time" }} - {{ event.end_time or "No end time" }}
         </li>
+    
     {% endfor %}
 </ul>
 {% endblock %}
+
+
