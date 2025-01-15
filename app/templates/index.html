@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Digital Calendar</h1>
+<a href="{{ url_for('main.create_event') }}" class="btn btn-primary mb-3">Add Event</a>
+<ul class="list-group">
+    {% for event in events %}
+        <li class="list-group-item">
+            <strong>{{ event.title }}</strong>
+            <br>
+            {{ event.start_time }} - {{ event.end_time }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
